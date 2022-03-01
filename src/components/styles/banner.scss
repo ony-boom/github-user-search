@@ -1,0 +1,14 @@
+.banner .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner .theme-switcher-box {
+  text-transform: uppercase;
+  font-weight: 600;
+
+  span {
+    margin-right: 1rem;
+  }
+}
