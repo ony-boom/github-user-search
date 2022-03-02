@@ -40,6 +40,10 @@ function App() {
     setClick(false);
   };
 
+  useEffect(() => {
+    console.log(userData);
+  }, [userData]);
+
   return (
     <div className="App">
       <Banner />

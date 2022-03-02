@@ -3,6 +3,17 @@ $box-shadow: 0 13px 28px rgba(0, 0, 0, 0.15);
 
 .search-box {
   margin-top: 3.2rem;
+  top: -1px;
+  position: sticky;
+
+  @media only screen and (max-width: 34.375em) {
+    .row {
+      width: 100%;
+      background-color: var(--bg-color);
+      padding: 2.8rem 5%;
+    }
+  }
+
   .input-box {
     display: flex;
     padding: 1rem;
@@ -21,7 +32,7 @@ $box-shadow: 0 13px 28px rgba(0, 0, 0, 0.15);
     input {
       height: 100%;
       width: 100%;
-      color: #fff;
+      color: var(--default-color);
       border: none;
       outline: none;
       padding: 0 8px;
@@ -44,7 +55,7 @@ $box-shadow: 0 13px 28px rgba(0, 0, 0, 0.15);
       font-family: inherit;
       padding: 1.4rem 2.4rem;
       display: inline-block;
-      color: var(--default-color);
+      color: #fff;
       border-radius: $border-radius;
       transition: background-color .3s;
       background-color: var(--blue-color);

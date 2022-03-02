@@ -14,14 +14,18 @@ const month = [
   "Dec",
 ];
 
-const UserAbout = ({ name, login, bio, created_at }) => {
+const UserAbout = ({ name, login, bio, created_at, html_url }) => {
   const parseDate = created_at.split("T")[0];
   const date = parseDate.split("-");
   return (
     <div className="user-about">
       <div className="user-about__profile">
         <h2 id="user">{name}</h2>
-        <p id="user-name">@{login}</p>
+        <p id="user-name">
+          <a href={`${html_url}`} className="login-url" target="_blank">
+            @{login}
+          </a>
+        </p>
         <p id="bio">{bio}</p>
       </div>
       <p id="sign-up-date">
@@ -62,6 +66,7 @@ const Result = ({
   message,
   clicked,
   userToFind,
+  html_url,
 }) => {
   return (
     <div className="result-box">
@@ -79,6 +84,7 @@ const Result = ({
                 bio={bio}
                 login={login}
                 created_at={created_at}
+                html_url={html_url}
               />
               <UserStat
                 followers={followers}

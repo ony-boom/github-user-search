@@ -7,6 +7,15 @@
 .banner .theme-switcher-box {
   text-transform: uppercase;
   font-weight: 600;
+  cursor: pointer;
+
+  i {
+    transition: all .3s;
+  }
+
+  &:hover i {
+    transform: rotate(80deg);
+  }
 
   span {
     margin-right: 1rem;
