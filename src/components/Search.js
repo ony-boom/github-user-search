@@ -27,7 +27,7 @@ const Search = ({ setUsername }) => {
             onClick={() => {
               const usernameToSearch =
                 document.getElementById("search-input").value;
-              setUsername(usernameToSearch);
+                setUsername(usernameToSearch);
             }}
           >
             Search
